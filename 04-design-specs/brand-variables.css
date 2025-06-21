@@ -1,0 +1,153 @@
+/* 
+ * BY MB Consultancy Brand Variables
+ * Official brand guidelines implementation
+ * Version: 1.0
+ * Purpose: Complete CSS variable system for brand compliance
+ */
+
+:root {
+  /* Primary Brand Colors - MUST USE */
+  --brand-primary: #447eff;           /* Azure Radiance - Primary brand color */
+  --brand-white: #ffffff;             /* Clean backgrounds, text contrast */
+  --brand-black: #000000;             /* Text, high contrast elements */
+  --brand-gold: #ffc554;              /* Accent highlights, CTA elements */
+  
+  /* Text Colors */
+  --text-primary: #333333;            /* Primary text color */
+  --text-secondary: #666666;          /* Secondary text color */
+  --text-light: #999999;              /* Light text for captions */
+  
+  /* Background Colors */
+  --bg-primary: #ffffff;              /* Main background */
+  --bg-light: #f8f9fa;               /* Light gray background */
+  --bg-azure-light: rgba(68, 126, 255, 0.05);  /* Light Azure background */
+  --bg-azure-gradient: linear-gradient(135deg, #447eff 0%, rgba(68, 126, 255, 0.8) 100%);
+  --bg-gold-gradient: linear-gradient(135deg, #ffc554 0%, rgba(255, 197, 84, 0.9) 100%);
+  
+  /* Typography - Brand Fonts (MUST USE) */
+  --font-primary: 'Poppins Black', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-secondary: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  
+  /* Font Weights */
+  --weight-black: 900;                /* Poppins Black for headlines */
+  --weight-bold: 700;                 /* Bold text */
+  --weight-medium: 500;               /* Medium weight */
+  --weight-regular: 400;              /* Regular text */
+  
+  /* Font Sizes - Responsive Typography */
+  --text-hero: clamp(2.5rem, 5vw, 4rem);      /* Hero headlines */
+  --text-h1: clamp(2rem, 4vw, 3.5rem);        /* Primary headlines */
+  --text-h2: clamp(1.5rem, 3vw, 2.5rem);      /* Section titles */
+  --text-h3: clamp(1.25rem, 2.5vw, 2rem);     /* Subsection titles */
+  --text-h4: clamp(1.125rem, 2vw, 1.5rem);    /* Card titles */
+  --text-body: clamp(1rem, 1.5vw, 1.125rem);  /* Body text */
+  --text-small: clamp(0.875rem, 1.2vw, 1rem); /* Small text */
+  --text-caption: clamp(0.75rem, 1vw, 0.875rem); /* Captions */
+  
+  /* Line Heights */
+  --lh-tight: 1.2;                   /* Headlines */
+  --lh-normal: 1.5;                  /* Body text */
+  --lh-relaxed: 1.6;                 /* Paragraph text */
+  
+  /* Spacing System */
+  --space-xs: 0.5rem;     /* 8px */
+  --space-sm: 1rem;       /* 16px */
+  --space-md: 1.5rem;     /* 24px */
+  --space-lg: 2rem;       /* 32px */
+  --space-xl: 3rem;       /* 48px */
+  --space-2xl: 4rem;      /* 64px */
+  --space-3xl: 6rem;      /* 96px */
+  --space-4xl: 8rem;      /* 128px */
+  
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 50%;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.1);
+  --shadow-azure: 0 8px 32px rgba(68, 126, 255, 0.3);
+  --shadow-gold: 0 8px 32px rgba(255, 197, 84, 0.3);
+  
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+  
+  /* Z-index Scale */
+  --z-dropdown: 100;
+  --z-modal: 200;
+  --z-overlay: 300;
+  --z-tooltip: 400;
+  
+  /* Container Widths */
+  --container-sm: 640px;
+  --container-md: 768px;
+  --container-lg: 1024px;
+  --container-xl: 1280px;
+  --container-2xl: 1536px;
+  
+  /* Button Styles */
+  --btn-padding-sm: 12px 24px;
+  --btn-padding-md: 16px 32px;
+  --btn-padding-lg: 20px 40px;
+  
+  /* Form Elements */
+  --input-padding: 12px 16px;
+  --input-border: 2px solid var(--brand-primary);
+  --input-border-radius: var(--radius-md);
+  
+  /* Brand Compliance Colors (RGB values for CSS functions) */
+  --azure-rgb: 68, 126, 255;
+  --gold-rgb: 255, 197, 84;
+  --black-rgb: 0, 0, 0;
+  --white-rgb: 255, 255, 255;
+}
+
+/* Dark Mode Variables (Optional) */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-primary: #1a1a1a;
+    --bg-light: #2a2a2a;
+    --text-primary: #ffffff;
+    --text-secondary: #cccccc;
+    --text-light: #999999;
+  }
+}
+
+/* Print Styles */
+@media print {
+  :root {
+    --brand-primary: #000000;
+    --brand-gold: #000000;
+    --bg-primary: #ffffff;
+    --text-primary: #000000;
+  }
+}
+
+/* 
+ * Brand Usage Guidelines:
+ * 
+ * PRIMARY COLORS (MUST USE):
+ * - Azure Radiance (#447eff) for headers, buttons, key elements
+ * - Gold (#ffc554) for accent highlights and conversion elements
+ * - Black (#000000) for readable text and professional elements
+ * - White (#ffffff) for clean backgrounds and contrast
+ * 
+ * TYPOGRAPHY (MUST USE):
+ * - Poppins Black for all headlines and brand elements
+ * - Roboto for body text and secondary content
+ * 
+ * BRAND VOICE (MUST APPLY):
+ * - Efficient: Straight to the point, no unnecessary complexity
+ * - Personable: Friendly approach, not overly formal
+ * - Tech-savvy: Simplifying complex technological concepts
+ * 
+ * TAGLINE (MUST INCLUDE):
+ * "Success is a Journey, Not a Destination"
+ */
